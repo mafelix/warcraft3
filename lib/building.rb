@@ -1,17 +1,20 @@
-class Building
+class Building 
+  attr_accessor :health_points
+  
   def initialize
-  @health_points = 500
+    @health_points = 500
   end
 
-  def attack(damage)
+  def damage(attacker)
     if attacker.instance_of? Footman
-      self.health_points -= (attacker.attack_power/2).ceil
+      @health_points -= (attacker.attack_power / 2).ceil
     elsif attacker.instance_of? SiegeEngine
-      self.health_points -= (attacker.attack_power * 2)
+      @health_points -= (attacker.attack_power * 2)
     else
-      self.health_points -= attacker.attack_power
+      @health_points -= attacker.attack_power
     end
   
+
 
 
   end

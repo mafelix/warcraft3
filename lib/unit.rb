@@ -10,8 +10,7 @@ class Unit
   def attack!(enemy)
     return nil if self.dead?
     return nil if enemy.dead?
-    enemy.damage(self.attack_power)
-    
+    enemy.damage(attack_power)
   end
 
   def damage(attack_power)
@@ -19,7 +18,7 @@ class Unit
   end
 
   def dead?
-    self.health_points <= 0
+    @health_points <= 0
   end
 
 

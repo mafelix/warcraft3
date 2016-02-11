@@ -12,6 +12,7 @@ attr_accessor :health_points, :attack_power
 
   def attack!(enemy)
     enemy.damage(10)
+    super
   end
 
   def damage(attack_power)
